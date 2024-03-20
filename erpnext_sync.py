@@ -24,7 +24,7 @@ if hasattr(config,'allowed_exceptions'):
 
 device_punch_values_IN = getattr(config, 'device_punch_values_IN', [0,4])
 device_punch_values_OUT = getattr(config, 'device_punch_values_OUT', [1,5])
-ERPNEXT_VERSION = getattr(config, 'ERPNEXT_VERSION', 14)
+ERPNEXT_VERSION = getattr(config, 'ERPNEXT_VERSION', 15)
 
 # possible area of further developemt
     # Real-time events - setup getting events pushed from the machine rather then polling.
@@ -87,6 +87,7 @@ def pull_process_and_push_data(device, device_attendance_logs=None):
     attendance_failed_logger = setup_logger(attendance_failed_log_file, '/'.join([config.LOGS_DIRECTORY, attendance_failed_log_file])+'.log')
     if not device_attendance_logs:
         device_attendance_logs = get_all_attendance_from_device(device['ip'], device_id=device['device_id'], clear_from_device_on_fetch=device['clear_from_device_on_fetch'])
+        print(device_attendance_logs)
         if not device_attendance_logs:
             return
     # for finding the last successfull push and restart from that point (or) from a set 'config.IMPORT_START_DATE' (whichever is later)
