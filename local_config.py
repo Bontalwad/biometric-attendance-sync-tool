@@ -18,8 +18,8 @@ IMPORT_START_DATE = '20240101' # format: '20190501'
     #- clear_from_device_on_fetch: if set to true then attendance is deleted after fetch is successful.
                                     #(Caution: this feature can lead to data loss if used carelessly.)
 devices = [
-    {'device_id':'PAUL HOTEL OUT READER','ip':'172.150.1.11', 'punch_direction': "AUTO", 'clear_from_device_on_fetch': False},
-    {'device_id':'PAUL HOTEL IN READER','ip':'172.150.1.9', 'punch_direction': "AUTO", 'clear_from_device_on_fetch': False}
+    {'device_id':'PAUL HOTEL OUT READER','ip':'172.150.1.11', 'punch_direction': "OUT", 'clear_from_device_on_fetch': False},
+    {'device_id':'PAUL HOTEL IN READER','ip':'172.150.1.9', 'punch_direction': "IN", 'clear_from_device_on_fetch': False}
 ]
 
 # Configs updating sync timestamp in the Shift Type DocType 
