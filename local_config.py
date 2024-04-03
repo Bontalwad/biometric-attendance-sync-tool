@@ -7,9 +7,9 @@ ERPNEXT_VERSION = 15
 
 
 # operational configs
-PULL_FREQUENCY = 60 # in minutes
+PULL_FREQUENCY = 15 # in minutes
 LOGS_DIRECTORY = 'logs' # logs of this script is stored in this directory
-IMPORT_START_DATE = '20240101' # format: '20190501'
+IMPORT_START_DATE = '20231212' # format: '20190501'
 
 # Biometric device configs (all keys mandatory)
     #- device_id - must be unique, strictly alphanumerical chars only. no space allowed.
